@@ -4,7 +4,8 @@ from src.routes import user
 
 def create_app():
     app = FastAPI()
-    app.include_router(user.register_router)
+    app.include_router(user.user_router)
+    app.include_router(user.guest_router)
     
     return app  
 
